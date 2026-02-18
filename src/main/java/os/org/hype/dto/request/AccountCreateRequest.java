@@ -16,7 +16,7 @@ public class AccountCreateRequest extends BaseModel {
     @NotNull
     private String rib;
     @NotNull
-    private String amount;
+    private String balance;
     @NotNull
     private String currency;
     private boolean isBlocked = false;

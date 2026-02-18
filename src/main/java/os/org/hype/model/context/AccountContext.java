@@ -16,7 +16,7 @@ public class AccountContext extends AppContext{
     private Long id;
     private String reference;
     private String rib;
-    private String amount;
+    private String balance;
     private String currency;
     private boolean isBlocked = false;
     private AccountStatus accountStatus;

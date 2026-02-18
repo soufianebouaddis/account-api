@@ -4,7 +4,6 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Component;
 import os.org.hype.model.enums.AccountPipeline;
-import os.org.hype.processor.AppProcessors;
 
 @Component
 @RequiredArgsConstructor

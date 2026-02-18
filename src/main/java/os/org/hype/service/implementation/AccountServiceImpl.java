@@ -10,19 +10,19 @@ import os.org.hype.model.context.AccountPageContext;
 import os.org.hype.model.enums.AccountPipeline;
 import os.org.hype.model.enums.AccountStatus;
 import os.org.hype.model.enums.ServiceKeys;
-import os.org.hype.repository.AccountRespository;
+import os.org.hype.repository.AccountRepository;
 import os.org.hype.service.AccountService;
 
 @Service
 @AppServiceName(ServiceKeys.ACCOUNT_SERVICE)
 public class AccountServiceImpl extends AccountBaseService implements AccountService {
-    private final AccountRespository accountRespository;
+    private final AccountRepository accountRepository;
 
     public AccountServiceImpl(
-            AccountRespository accountRespository,
+            AccountRepository accountRespository,
             AccountPipelineRegistry pipelineRegistry
     ) {
-        this.accountRespository = accountRespository;
+        this.accountRepository = accountRespository;
         this.registry = pipelineRegistry;
     }
 
@@ -31,7 +31,7 @@ public class AccountServiceImpl extends AccountBaseService implements AccountSer
         AccountContext ctx = AccountContext.builder()
                 .reference(account.getReference())
                 .rib(account.getRib())
-                .amount(account.getAmount())
+                .balance(account.getBalance())
                 .currency(account.getCurrency())
                 .isBlocked(false)
                 .accountStatus(AccountStatus.ACTIVE)
@@ -47,7 +47,7 @@ public class AccountServiceImpl extends AccountBaseService implements AccountSer
                 .id(id)
                 .reference(account.getReference())
                 .rib(account.getRib())
-                .amount(account.getAmount())
+                .balance(account.getBalance())
                 .currency(account.getCurrency())
                 .isBlocked(false)
                 .accountStatus(AccountStatus.ACTIVE)

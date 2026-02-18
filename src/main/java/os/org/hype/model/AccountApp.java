@@ -18,7 +18,7 @@ public class AccountApp extends BaseEntity {
     private Long id;
     private String reference;
     private String rib;
-    private String amount;
+    private String balance;
     private String currency;
     private boolean isBlocked = false;
     @Enumerated(EnumType.STRING)

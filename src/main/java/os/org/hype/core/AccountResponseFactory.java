@@ -20,7 +20,7 @@ public class AccountResponseFactory {
                         .id(ctx.getId())
                         .reference(ctx.getReference())
                         .rib(ctx.getRib())
-                        .amount(ctx.getAmount())
+                        .balance(ctx.getBalance())
                         .currency(ctx.getCurrency())
                         .isBlocked(ctx.isBlocked())
                         .accountStatus(ctx.getAccountStatus())
