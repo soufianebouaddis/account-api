@@ -1,13 +1,15 @@
 package os.org.hype.dto.response;
 
 
+import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 import os.org.hype.model.base.BaseModel;
 import os.org.hype.model.enums.AccountStatus;
 @Getter
 @Setter
-public class ClientCreateReponse extends BaseModel {
+@Builder
+public class AccountCreateReponse extends BaseModel {
     private Long id;
     private String reference;
     private String rib;

@@ -12,7 +12,8 @@ import os.org.hype.model.enums.AccountStatus;
 @SuperBuilder
 @NoArgsConstructor
 @AllArgsConstructor
-public class AccountContext {
+public class AccountContext extends AppContext{
+    private Long id;
     private String reference;
     private String rib;
     private String amount;

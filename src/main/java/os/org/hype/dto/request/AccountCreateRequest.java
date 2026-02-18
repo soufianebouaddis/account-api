@@ -10,7 +10,7 @@ import os.org.hype.model.base.BaseModel;
 import os.org.hype.model.enums.AccountStatus;
 @Getter
 @Setter
-public class ClientCreateRequest extends BaseModel {
+public class AccountCreateRequest extends BaseModel {
     @NotNull
     private String reference;
     @NotNull
