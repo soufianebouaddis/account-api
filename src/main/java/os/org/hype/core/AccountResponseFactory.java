@@ -2,7 +2,7 @@ package os.org.hype.core;
 
 import lombok.NoArgsConstructor;
 import org.springframework.http.ResponseEntity;
-import os.org.hype.dto.response.AccountCreateReponse;
+import os.org.hype.dto.response.AccountCreateResponse;
 import os.org.hype.model.context.AccountContext;
 import os.org.hype.model.context.AccountPageContext;
 
@@ -11,12 +11,12 @@ import java.util.Map;
 
 @NoArgsConstructor
 public class AccountResponseFactory {
-    public static ResponseEntity<AccountCreateReponse> from(AccountContext ctx) {
+    public static ResponseEntity<AccountCreateResponse> from(AccountContext ctx) {
         if (!ctx.isSuccess()) {
             return ResponseEntity.badRequest().build();
         }
         return ResponseEntity.ok(
-                AccountCreateReponse.builder()
+                AccountCreateResponse.builder()
                         .id(ctx.getId())
                         .reference(ctx.getReference())
                         .rib(ctx.getRib())

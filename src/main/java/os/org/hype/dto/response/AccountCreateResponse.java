@@ -9,7 +9,7 @@ import os.org.hype.model.enums.AccountStatus;
 @Getter
 @Setter
 @Builder
-public class AccountCreateReponse extends BaseModel {
+public class AccountCreateResponse extends BaseModel {
     private Long id;
     private String reference;
     private String rib;

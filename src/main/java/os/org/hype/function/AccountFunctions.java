@@ -11,7 +11,7 @@ import java.util.Objects;
 
 import static java.util.Objects.requireNonNull;
 
-public interface AccountFunction {
+public interface AccountFunctions {
     static AccountContext create(AccountCreateRequest request) {
         requireNonNull(request, "request");
         AccountService service = AccountServiceLocatorHolder.get(
