@@ -5,7 +5,7 @@ import org.springframework.stereotype.Component;
 import os.org.hype.model.context.AccountContext;
 import os.org.hype.repository.AccountRepository;
 
-@Component("step.accout.update")
+@Component("step.account.update")
 @RequiredArgsConstructor
 public class UpdateProcessor implements ProcessorStep<AccountContext> {
 

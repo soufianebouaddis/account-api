@@ -60,7 +60,7 @@ public class PipelineConfig {
         ));
     }
 
-     @Bean
+    @Bean("pipeline.account.delete")
     public AppProcessors deletePipeline(
             @Qualifier("step.account.exist") ProcessorStep<AccountContext> exists,
             @Qualifier("step.account.deleteById") ProcessorStep<AccountContext> delete,
