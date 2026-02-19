@@ -26,6 +26,7 @@ public class FindAllProcessor implements ProcessorStep<AccountContext> {
                 pageCtx.getPage(),
                 pageCtx.getSize()
         );
+
         Page<AccountApp> page = repository.findAll(pageable);
         List<AccountViewContext> users = page.getContent().stream()
                 .map(acc -> AccountViewContext.builder()

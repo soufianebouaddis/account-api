@@ -42,7 +42,7 @@ public class AccountController {
 
     @GetMapping("get-all-accounts")
     @Operation(summary = "get all accounts")
-    public ResponseEntity<?> findAll(@RequestParam(defaultValue = "0") int page,
+    public ResponseEntity<Map<String, Object>> findAll(@RequestParam(defaultValue = "0") int page,
                                                        @RequestParam(defaultValue = "10") int size) {
         return AccountResponseFactory.from(
                 AccountFunctions.findAll(page, size)

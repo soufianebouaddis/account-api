@@ -4,6 +4,7 @@ import os.org.hype.api.AccountBuilder;
 import os.org.hype.core.AccountServiceLocatorHolder;
 import os.org.hype.dto.request.AccountCreateRequest;
 import os.org.hype.model.context.AccountContext;
+import os.org.hype.model.context.AccountPageContext;
 import os.org.hype.model.enums.ServiceKeys;
 import os.org.hype.service.AccountService;
 
@@ -31,7 +32,7 @@ public interface AccountFunctions {
         return AccountBuilder.findById(id);
     }
 
-    static AccountContext findAll(int page, int size) {
+    static AccountPageContext findAll(int page, int size) {
         return AccountBuilder.findAll(page, size);
     }
 

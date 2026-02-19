@@ -1,6 +1,8 @@
 package os.org.hype.service.implementation;
 
+
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import os.org.hype.core.AccountBaseService;
 import os.org.hype.core.AccountPipelineRegistry;
 import os.org.hype.core.AppServiceName;
@@ -56,6 +58,7 @@ public class AccountServiceImpl extends AccountBaseService implements AccountSer
     }
 
     @Override
+    @Transactional(readOnly = true)
     public AccountContext findById(Long id) {
         AccountContext ctx = AccountContext.builder()
                     .id(id)
@@ -64,6 +67,7 @@ public class AccountServiceImpl extends AccountBaseService implements AccountSer
     }
 
     @Override
+    @Transactional(readOnly = true)
     public AccountPageContext findAll(int page, int size) {
         AccountPageContext ctx = AccountPageContext.builder()
                     .page(page)
